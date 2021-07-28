@@ -34,8 +34,8 @@ const y_offensesByMonthCount_axis = d3.scaleLinear();
 const yAxis4 = d3.axisLeft();
 
 function initializeVisualization() {
-	loadScene0();
-	d3.select("#b0").classed("active",true);
+	loadScene1();
+	d3.select("#b1").classed("active",true);
     loadcsvdata( dataloaded );
 }
 
@@ -89,7 +89,6 @@ function dataloaded() {
 }
 
 function calculateScales1(){
-	d3.select("#b0").classed("active",false);
 	d3.select("#b1").classed("active",true);
 	d3.select("#b2").classed("active",false);
 	d3.select("#b3").classed("active",false);
@@ -108,7 +107,6 @@ function calculateScales1(){
 }
 
 function calculateScales2(){
-	d3.select("#b0").classed("active",false);
 	d3.select("#b1").classed("active",false);
 	d3.select("#b2").classed("active",true);
 	d3.select("#b3").classed("active",false);
@@ -127,7 +125,6 @@ function calculateScales2(){
 }
 
 function calculateScales3(){
-	d3.select("#b0").classed("active",false);
 	d3.select("#b1").classed("active",false);
 	d3.select("#b2").classed("active",false);
 	d3.select("#b3").classed("active",true);
@@ -146,7 +143,6 @@ function calculateScales3(){
 }
 
 function calculateScales4(){
-	d3.select("#b0").classed("active",false);
 	d3.select("#b1").classed("active",false);
 	d3.select("#b2").classed("active",false);
 	d3.select("#b3").classed("active",false);
@@ -1032,25 +1028,6 @@ function chart(csv) {
 			update(select.property("value"), 1000)
 		});
 }
-}
-
-function loadScene0() {
-	initializeChartArea();
-	d3.select("#b0").classed("active",true);
-	d3.select("#b1").classed("active",false);
-	d3.select("#b2").classed("active",false);
-	d3.select("#b3").classed("active",false);
-	d3.select("#b4").classed("active",false);
-	d3.select("#b5").classed("active",false);
-	//d3.selectAll("#selection").style("visibility","hidden");
-	d3.select("#chart-div").insert("div").classed("heading",true);
-	d3.select(".heading").insert("h2").text("Introduction").style("text-anchor", "start");
-	d3.select("#chart-div").insert("div").classed("para",true);
-	d3.select(".para").insert("p").text("This website contains narrative visualization presenting data related to crimes happened in Boston. Crime incident reports are provided by Boston Police Department (BPD) to document the initial details surrounding an incident to which BPD officers respond.");
-	d3.select(".para").insert("p").text("This data presented in this website is from June 14, 2015 and continue to September 3, 2018.");
-	d3.select(".para").insert("p").text("The narrative visualization is divided into two parts. The first part presents different bar charts showing number of crimes based on types, crimes over the month, day and hour to understand whether the frequency of crimes change over the month, day or hour?");
-	d3.select(".para").insert("p").text("The second part allows a reader to explore the data by type of the crime over hours of a day.");
-	d3.select(".para").insert("p").text("Use page numbers shown in the top left to navigate to different scenes in this narrative visualization.");
 }
 
 function loadScene1() {
