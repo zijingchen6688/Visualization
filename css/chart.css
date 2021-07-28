@@ -1,5 +1,5 @@
 li {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 
@@ -8,10 +8,10 @@ div {
 }
 
 .rect-offenseCount {
-    fill: yellow;
+    fill: steelblue;
 }
 
 .chart text {
-    font: 12px sans-serif;
+    font: 11px sans-serif;
     text-anchor: end;
 }
