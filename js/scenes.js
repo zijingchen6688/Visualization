@@ -33,7 +33,6 @@ const y_offensesByMonthCount = d3.scaleLinear();
 const y_offensesByMonthCount_axis = d3.scaleLinear();
 const yAxis4 = d3.axisLeft();
 
-/*
 function loadcsvdata( dataloaded ) {
     d3.dsv(",", "../dataset/crime.csv", function(d) {
 
@@ -77,13 +76,12 @@ function loadcsvdata( dataloaded ) {
         dataloaded();
     });	
 }
-*/
-/*
+
 function dataloaded() {
     d3.select("#chart-id")
         .classed("invisible",false);
 }
-*/
+
 
 function calculateScales1(){
 	d3.select("#b1").classed("active",true);
